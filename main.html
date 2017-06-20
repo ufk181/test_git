@@ -3,15 +3,25 @@
 <head>
 <title>Vue.jS Örnekleri</title>
 <script src="https://unpkg.com/vue"></script>
-<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="src/app.js"></script>
 
 </head>
 <body>
 <div id="app">
- <h1 v-if="giris"> {{message}} {{username}} </h1>
- <h1  v-if="!giris"> Giriş Yapmamışsın. </h1>
+    <div v-if="isLoading"> is Loading.</div>
+ <h1 v-if="logged"> {{message}} {{username}} </h1>
+ <h1  v-if="!logged"> Giriş Yapmamışsın. </h1>
+ <hr>
+
+
+ <p v-for="items in comments">
+     {{items.id}} - {{items.title}} - {{items.body}}
+
+ </p>
 
 </div>
 
 </body>
 </html>
+
+
