@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Vue.jS Örnekleri</title>
+<title>Data bind</title>
 <script src="https://unpkg.com/vue"></script>
 <script type="text/javascript" src="src/app.js"></script>
 
@@ -14,10 +14,10 @@
  <hr>
 
 
- <p v-for="items in comments">
-     {{items.id}} - {{items.title}} - {{items.body}}
 
- </p>
+    <ul type="square">
+        <li v-for="items in comments" >{{items.id}} - <b style="color:red;">{{items.title}} </b> - {{items.body}} </li>
+    </ul>
 
 </div>
 

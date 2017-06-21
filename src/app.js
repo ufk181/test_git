@@ -40,13 +40,13 @@ window.addEventListener('load', () => {
             isLoading : true
         },
         created(){
-            fetch("src/data.json")
-                .then((res) => {return res.json()})
-                .then((res) => {
-                this.isLoading = false;
-                  this.comments = res.comments;
+                fetch("src/data.json")
+                    .then((res) => {return res.json()})
+                    .then((res) => {
+                        this.isLoading = false;
+                        this.comments = res.comments;
 
-                })
+                    })
         } //created bitiş.
 
 
