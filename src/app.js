@@ -1,41 +1,9 @@
-/*window.addEventListener('load', () => {
-
-    window.vue  = new Vue({
-    el : "#app",
-    name : "JsonPage",
-    post:[],
-    data : {
-        message : "Merhaba",
-
-        giris : true,
-        username : "Ufuk"
-    },
-    created()   {
-
-        fetch("https://jsonplaceholder.typicode.com/posts")
-            .then((res) => {return res.json() })
-    .then((res) => {
-
-
-        })
-
-
-
-
-    } //Created Bitiş.
-})
-}); */
-
-
 window.addEventListener('load', () => {
     window.vue = new Vue({
-
         el: "#app",
-        name: "JsonTest",
-        comments:[],
         data: {
+            commentsData:[],
             message: "Developer",
-            logged: true,
             username:"Ufuk",
             isLoading : true
         },
@@ -44,8 +12,7 @@ window.addEventListener('load', () => {
                     .then((res) => {return res.json()})
                     .then((res) => {
                         this.isLoading = false;
-                        this.comments = res.comments;
-
+                        this.commentsData = res.comments;
                     })
         } //created bitiş.
 
